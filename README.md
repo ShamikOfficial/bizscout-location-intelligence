@@ -89,34 +89,28 @@ bizscout-ai/
 └── README.md            # Documentation
 ```
 
-## 🔧 Configuration
-The application can be configured through:
-- `config.yaml`: Main configuration file
-- Environment variables
-- Command-line arguments
+## 📂 Data Files Overview
 
-## 🤝 Contributing
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+### Raw Data (`data/raw/`)
+- `la_zoning_1.csv` (371MB): Raw Los Angeles zoning data containing land use regulations and restrictions
+
+### Semi-Processed Data (`data/semi_processed/`)
+- `cluster_centroids.json` (70KB): Geographic coordinates for cluster centers
+- `opentable_data_20250507_010741.csv` (930KB): Restaurant data from OpenTable
+- `yelp_data_20250507_010740.csv` (15MB): Restaurant data from Yelp
+- `zoning_data_20250507_010734.csv` (375MB): Processed zoning data with standardized formats
+
+### Processed Data (`data/processed/`)
+- `combined_restaurants_20250507_050351.csv` (1.4MB): Merged restaurant data from all sources with standardized categories
+
+### Final Output (`data/final_output/`)
+- `cluster_analysis_High_Capital_High_Risk.csv` (9.7KB): Analysis results for high capital, high risk strategy
+- `cluster_analysis_High_Capital_Low_Risk.csv` (9.8KB): Analysis results for high capital, low risk strategy
+- `cluster_analysis_Low_Capital_High_Risk.csv` (9.9KB): Analysis results for low capital, high risk strategy
+- `cluster_analysis_Low_Capital_Low_Risk.csv` (9.9KB): Analysis results for low capital, low risk strategy
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-- Your Name - Initial work
-
-## 🙏 Acknowledgments
-- Thanks to all contributors
-- Special thanks to the open-source community
-
-## 📞 Support
-For support, please:
-- Open an issue in the repository
-- Contact the maintainers
-- Check the documentation
 
 ## 🔄 Updates
 - Latest update: [Date]

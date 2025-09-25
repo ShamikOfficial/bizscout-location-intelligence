@@ -432,44 +432,6 @@ if st.session_state.analysis_completed and st.session_state.merged_df is not Non
             st.metric("Total Locations", f"{top_locations['Location Count'].sum():,}")
         with col4:
             st.metric("Avg. Locations/Cluster", f"{top_locations['Location Count'].mean():.1f}")
-        
-        # Add a bar chart showing location distribution
-        fig_locations = px.bar(
-            top_locations,
-            x='Rank',
-            y='Location Count',
-            title='Location Distribution in Top Clusters',
-            color='Score',
-            color_continuous_scale='Plasma',
-            labels={'Location Count': 'Number of Locations', 'Rank': 'Cluster Rank'}
-        )
-        fig_locations.update_layout(
-            plot_bgcolor='white',
-            title_x=0.5,
-            margin=dict(t=15, b=5, l=5, r=5),
-            height=300,
-            xaxis=dict(
-                showgrid=True,
-                gridcolor='#E0E0E0',
-                title_font=dict(size=12, color='#424242')
-            ),
-            yaxis=dict(
-                showgrid=True,
-                gridcolor='#E0E0E0',
-                title_font=dict(size=12, color='#424242')
-            ),
-            title_font=dict(size=14, color='#212121'),
-            coloraxis_colorbar=dict(
-                title="Score",
-                thickness=15,
-                len=0.5,
-                yanchor="middle",
-                y=0.5,
-                xanchor="right",
-                x=1.1
-            )
-        )
-        st.plotly_chart(fig_locations, use_container_width=True)
 
     with tab2:
         # Score distribution plot

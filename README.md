@@ -111,8 +111,3 @@ bizscout-ai/
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔄 Updates
-- Latest update: [Date]
-- Version: 1.0.0
-- See [CHANGELOG.md](CHANGELOG.md) for full history
